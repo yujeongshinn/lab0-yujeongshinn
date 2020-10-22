@@ -1,0 +1,310 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled1.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyMLH3ZLsCnGRrMiZB++eZNv",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yujeongshinn/lab0-yujeongshinn/blob/master/Homework_yujeongshin\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "Ip9h4MpJCRwH"
+      },
+      "source": [
+        "### Homework: Use list comprehension in the upper code"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "3JTBDQiLCMV_",
+        "outputId": "081053a0-e84c-466c-e148-1beb17c073fa",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "h_letters = [letter for letter in 'weather change']\n",
+        "print(h_letters)"
+      ],
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['w', 'e', 'a', 't', 'h', 'e', 'r', ' ', 'c', 'h', 'a', 'n', 'g', 'e']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "6aXFZUwTCa7d",
+        "outputId": "3e2b5d45-6c3c-463e-d8b0-88e1d09d4f08",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "#Iterating though a string using a for loop transform a string to list.\n",
+        "h_letters = []\n",
+        "for letter in 'weather change':\n",
+        "  h_letters.append(letter)\n",
+        "print(h_letters)"
+      ],
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['w', 'e', 'a', 't', 'h', 'e', 'r', ' ', 'c', 'h', 'a', 'n', 'g', 'e']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "eDC-BPYQCa46"
+      },
+      "source": [
+        "x= [1,2,3,4] #list"
+      ],
+      "execution_count": 8,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "qSeysSSDCa2Z",
+        "outputId": "8b76dd2f-14ae-4819-daa3-2891646aaf88",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "out = []\n",
+        "for item in x:\n",
+        "  out.append(item+10)\n",
+        "print(out)"
+      ],
+      "execution_count": 11,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "[11, 12, 13, 14]\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "2yLmacoeGKab",
+        "outputId": "e8f04b0f-5963-4d39-8d42-6e3c90fc9d68",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "#sintax [expression for item in list]\n",
+        "[item+10 for item in x]"
+      ],
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[11, 12, 13, 14]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 13
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "_qfalNrhGKu7"
+      },
+      "source": [
+        "#if... else with list comprehension\n",
+        "obj = [\"Even\" if i%2 == 0 else \"Odd\" for i in x]"
+      ],
+      "execution_count": 14,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "Lu_OCaP5GKSV",
+        "outputId": "425e4023-9f91-4f0a-dd6d-2c0e39e54846",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "print(obj)"
+      ],
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['Odd', 'Even', 'Odd', 'Even']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "wPCKCcrZCsU1"
+      },
+      "source": [
+        "### Homework: Transform the string to a list function to lambda expression with map\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vDGhrAKFCazl",
+        "outputId": "14e4e0e0-94d7-4787-e839-d16c005146c3",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "str= range(10)\n",
+        "list(map(lambda x: x*2, str))"
+      ],
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 33
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "XAUKkfVlCawd",
+        "outputId": "96f25f23-506e-484b-cfd3-acadf397857f",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "seq = list(range(10))\n",
+        "def double(var):\n",
+        "  return var*2\n",
+        "lambda var: var * 2\n",
+        "list(map(lambda var:var*2,seq))"
+      ],
+      "execution_count": 34,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 34
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "n5rSD5TYC9HL"
+      },
+      "source": [
+        "### Homework remove \" \" from a string_to_list using filter\n",
+        "#['w','e','a','t','h','e','r','','c','h','a','n','g','e'] ->\n",
+        "#['w','e','a','t','h','e','r','c','h','a','n','g','e'] "
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "nukLp8MeCaog"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "XSb4KfcrDERT"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "SaooqXe1Calm"
+      },
+      "source": [
+        ""
+      ],
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
