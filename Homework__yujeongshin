@@ -1,0 +1,220 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "Untitled2.ipynb의 사본",
+      "provenance": [],
+      "authorship_tag": "ABX9TyOMNyS0bvrov/Lb+T2xR8Q9",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/yujeongshinn/lab0-yujeongshinn/blob/master/Homework__yujeongshin\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "ceW2i6JWoXwc"
+      },
+      "source": [
+        "### Homework: Use list comprehension in the upper code"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "vMxnpx0QoS4a",
+        "outputId": "94fa2314-3899-4527-d2e5-6100440a6407",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "h_letters = [letter for letter in 'weather change']\n",
+        "print(h_letters)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['w', 'e', 'a', 't', 'h', 'e', 'r', ' ', 'c', 'h', 'a', 'n', 'g', 'e']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "4yuSmeoipr2c"
+      },
+      "source": [
+        "### Homework: Transform the string to a list function to a lambda expression with map"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "ub9oC12aoYoe",
+        "outputId": "167ef19b-cdc8-472b-e720-ce3a1f905c59",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "map(lambda x: x * 2, range(10))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "<map at 0x7f6174ef6c88>"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 6
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "hT9lhEdFoYaQ",
+        "outputId": "3a2f9c54-a5c9-45b9-e86b-1fad352cda75",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "list(map(lambda x: x * 2, range(10)))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 7
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "P1dVedivoYMC",
+        "outputId": "57a4fc44-372b-4ac8-c3cc-dec989ec7271",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "str = range(10)\n",
+        "list(map(lambda x: x * 2, str))"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 2, 4, 6, 8, 10, 12, 14, 16, 18]"
+            ]
+          },
+          "metadata": {
+            "tags": []
+          },
+          "execution_count": 8
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "6OvKQOjyoZRk"
+      },
+      "source": [
+        "### Homework: Remove \" \" from a string_to_list"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "iBGk5ccdoaK6",
+        "outputId": "c711bbdf-1c78-4003-85c6-1f63d797f6b0",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "h_letters = []\n",
+        "for letter in 'weather change':\n",
+        "  h_letters.append(letter)\n",
+        "print(h_letters)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['w', 'e', 'a', 't', 'h', 'e', 'r', ' ', 'c', 'h', 'a', 'n', 'g', 'e']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "id": "LAvAawc3oaBE",
+        "outputId": "8a300864-c629-4de2-d7a7-188b0ec21930",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        }
+      },
+      "source": [
+        "del h_letters[7]\n",
+        "print(h_letters)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "['w', 'e', 'a', 't', 'h', 'e', 'r', 'c', 'h', 'a', 'n', 'g', 'e']\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
